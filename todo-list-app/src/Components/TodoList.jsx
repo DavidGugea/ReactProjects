@@ -45,7 +45,7 @@ export default function TodoList() {
     return (
         <div>
             <h1>Todo List</h1>
-            <TodoForm onSubmit={addTodo} />
+            <TodoForm edit={edit} onSubmit={addTodo} />
             <Todo
                 todos={todos}
                 completeTodo={completeTodo}
