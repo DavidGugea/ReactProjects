@@ -83,3 +83,7 @@ body {
 .todo-container .todo-options .todo-button {
     border: 1px black solid;
 }
+
+.todo-container-done {
+    opacity: 0.4;
+}
