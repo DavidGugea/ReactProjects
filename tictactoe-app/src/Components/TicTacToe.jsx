@@ -34,24 +34,30 @@ export default function TicTacToe() {
         for (let i = 0; i < 3; ++i) {
             if (currentBoard[i][0] !== '' && currentBoard[i][0] === currentBoard[i][1] && currentBoard[i][1] === currentBoard[i][2]) {
                 setWinner(getWinnerString(currentUser) + "on a row.");
+                return;
             }
 
             if (currentBoard[0][i] !== '' && currentBoard[0][i] === currentBoard[1][i] && currentBoard[1][i] === currentBoard[2][i]) {
                 setWinner(getWinnerString(currentUser) + "on a column.");
+                return;
             }
         }
 
         // Check diagonal
         if (currentBoard[0][0] !== '' && currentBoard[0][0] === currentBoard[1][1] && currentBoard[1][1] === currentBoard[2][2]) {
             setWinner(getWinnerString(currentUser) + "on the diagonal.");
+            return;
         }
 
         // Check anti-diagonal
-        if (currentBoard[0][2] !== '' && currentBoard[0][2] === currentBoard[1][1] && currentBoard[2][0]) {
+        if (currentBoard[0][2] !== '' && currentBoard[0][2] === currentBoard[1][1] && currentBoard[1][1] === currentBoard[2][0]) {
             setWinner(getWinnerString(currentUser) + "on the anti-diagonal.");
+            return;
         }
 
         if (emptyCells === 0 && winner === 'Not known yet.') {
+            console.log(emptyCells);
+            console.log(currentBoard);
             setWinner("Draw.");
         }
     };
@@ -98,6 +104,7 @@ export default function TicTacToe() {
         );
 
         if (!cellNotEmpty) {
+            console.log(user);
             setBoard(newBoard);
             setUser(!user);
             checkWhoWon(newBoard, user, emptyCells);
@@ -105,14 +112,14 @@ export default function TicTacToe() {
     };
 
     return (
-        <div>
+        <div id="game">
             <Board board={board} cellClick={cellClick} />
             <div>
                 <p>Player 1: X</p>
                 <p>Player 2: O</p>
                 <p>Winner: {winner}</p>
             </div>
-            <button onClick={resetGame}>Reset game</button>
+            <button id="resetButton" onClick={resetGame}>Reset game</button>
         </div>
     );
 }
