@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #616161, #9bc5c3);
+}
+
+#todolist-app {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 100vw;
+    width: 100vw;
+
+    gap: 30px;
+}
+
+#todolist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#todolist-form #form-title {
+    color: #09716D;
+    margin-left: 25px;
+}
+
+#todolist-form form {
+    display: flex;
+    flex-direction: row;
+}
+
+#todolist-form form input {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+#todolist-form form button {
+    padding: 10px;
+    background-color: #b4dfe5;
+}
+
+#todoList {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.todo-container {
+    display: flex;
+    flex-direction: row;
+
+    width: 1000px;
+
+    border: 1px white solid;
+    padding: 5px;
+}
+
+.todo-container .todo-text {
+    text-align: center;
+    flex-grow: 30;
+}
+
+.todo-container .todo-options {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.todo-container .todo-options .todo-button {
+    border: 1px black solid;
+}
