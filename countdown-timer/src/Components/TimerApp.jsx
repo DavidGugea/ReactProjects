@@ -29,7 +29,7 @@ export default function TimerApp() {
                 minutes: parseInt(timerSecondsPassed.current / 60, 10),
                 seconds: timerSecondsPassed.current % 60,
             });
-        }, 1);
+        }, 1000);
     };
 
     const stopFunction = () => {
@@ -46,6 +46,7 @@ export default function TimerApp() {
             minutes: 0,
             seconds: 0,
         });
+        timerSecondsPassed.current = 0;
         clearInterval(timerInterval.current);
         timerInterval.current = null;
     };
