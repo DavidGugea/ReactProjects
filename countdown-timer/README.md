@@ -1,4 +1,4 @@
-# Design of the timer with Figma
+# Figma UI
 
 ![Design](/countdown-timer/figma/Design.PNG)
 
