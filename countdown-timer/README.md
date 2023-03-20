@@ -11,3 +11,10 @@
 - \#cecbcb
 - \#cc6666
 - \#66cc99
+
+# Technologies used
+
+* ReactJS
+* Create-React-App
+* Tailwind
+* Figma
